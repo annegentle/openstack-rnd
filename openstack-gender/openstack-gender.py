@@ -15,14 +15,11 @@ femalecount = 0
 unknowncount = 0
 
 for developers in devs['developers'] :
-    #pprint(developers)
     fname = devs['developers'][developers][0]
     for key, value in fname.iteritems():
         checkname = value.encode('ascii','ignore')
         checkname = checkname.upper()
-        # print "checking %s : " % ( checkname )
         try:
-            # print gender.gender[checkname]
             gendev = gender.gender[checkname]
             if gendev == 'male' :
                 malecount += 1
