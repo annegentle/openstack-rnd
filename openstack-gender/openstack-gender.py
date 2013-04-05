@@ -17,8 +17,7 @@ unknowncount = 0
 for developers in devs['developers'] :
     fname = devs['developers'][developers][0]
     for key, value in fname.iteritems():
-        checkname = value.encode('ascii','ignore')
-        checkname = checkname.upper()
+        checkname = value.upper()
         try:
             gendev = gender.gender[checkname]
             if gendev == 'male' :
